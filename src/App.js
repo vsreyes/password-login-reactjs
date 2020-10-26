@@ -5,6 +5,7 @@ import './App.css';
 const App = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(true);
 
   return (
     <div className='container'>
@@ -21,8 +22,12 @@ const App = () => {
         onChange={e => setPassword(e.target.value)}
       />
       <h2>{username}</h2>
-      <h2>{password}</h2>
-      <button>Show/Hide password</button>
+      {/* if the showPassword is true then we display SHOW else we display NOT
+      SHOW */}
+      <h2>{showPassword ? password : 'NOT SHOW'}</h2>
+      <button onClick={e => setShowPassword(!showPassword)}>
+        Show/Hide password
+      </button>
     </div>
   );
 };
