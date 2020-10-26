@@ -16,7 +16,7 @@ const App = () => {
         onChange={e => setUsername(e.target.value)}
       />
       <input
-        type='password'
+        type={showPassword ? 'text' : 'password'}
         placeholder='Enter password'
         value={password}
         onChange={e => setPassword(e.target.value)}
