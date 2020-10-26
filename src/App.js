@@ -24,7 +24,7 @@ const App = () => {
       <h2>{username}</h2>
       {/* if the showPassword is true then we display SHOW else we display NOT
       SHOW */}
-      <h2>{showPassword ? password : 'NOT SHOW'}</h2>
+      <h2>{showPassword ? password : '*'.repeat(password.length)}</h2>
       <button onClick={e => setShowPassword(!showPassword)}>
         Show/Hide password
       </button>
